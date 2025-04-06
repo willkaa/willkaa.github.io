@@ -1,11 +1,17 @@
 function showMessage1() {
     const message1 = document.getElementById("message1");
-    message1.style.display = message1.style.display === "block" ? "none" : "block";
+    // Show the message1 if it is not already displayed
+    message1.style.display = "block";
 }
 
 function showMessage2() {
     const message2 = document.getElementById("message2");
-    message2.style.display = message2.style.display === "block" ? "none" : "block";
+    // Show the message2 if it is not already displayed
+    message2.style.display = "block";
+}
+
+function showLove() {
+    alert('I Love you caca🥰');
 }
 
 // Menambahkan elemen gelembung secara dinamis
