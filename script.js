@@ -10,10 +10,6 @@ function showMessage2() {
     message2.style.display = "block";
 }
 
-function showLove() {
-    alert('I Love you caca🥰');
-}
-
 // Menambahkan elemen gelembung secara dinamis
 window.onload = function() {
     createBubbles();
