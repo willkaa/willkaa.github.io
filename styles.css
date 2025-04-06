@@ -1,0 +1,164 @@
+/* Body dengan animasi latar belakang bergerak */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #ff4d4d;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #ff99cc, #ff66b2, #ff4d4d);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+/* Animasi gradien bergerak */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Background putih transparan */
+    padding: 40px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #ff1a1a;
+}
+
+.heart {
+    font-size: 4rem;
+    color: #ff66b2;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.image {
+    width: 25%;
+    height: 50%;
+    max-width: 400px;
+    border-radius: 15px;
+    margin: 20px 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.image:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    background-color: #fff;
+    color: #ff4d4d;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff1a1a;
+    color: white;
+    transform: scale(1.1);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    display: none;
+    color: #ff66b2;
+}
+
+/* Animasi gelembung dan partikel */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ff99cc;
+    opacity: 0.7;
+    animation: float 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.bubble-small {
+    width: 40px;
+    height: 40px;
+    top: 10%;
+    left: 20%;
+}
+
+.bubble-medium {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+}
+
+.bubble-large {
+    width: 80px;
+    height: 80px;
+    top: 80%;
+    left: 70%;
+}
+
+/* Partikel bergerak */
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: twinkle 2s infinite alternate;
+    opacity: 0.8;
+}
+
+@keyframes twinkle {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* Bintang di latar belakang */
+.star-background {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkle 1.5s infinite alternate;
+}
+
+/* Banyak bintang dengan berbagai ukuran */
+.star-background:nth-child(1) { left: 10%; top: 15%; animation-duration: 1.5s; }
+.star-background:nth-child(2) { left: 20%; top: 30%; animation-duration: 2s; }
+.star-background:nth-child(3) { left: 50%; top: 25%; animation-duration: 2.5s; }
+.star-background:nth-child(4) { left: 80%; top: 45%; animation-duration: 1.8s; }
+.star-background:nth-child(5) { left: 60%; top: 60%; animation-duration: 2.2s; }
