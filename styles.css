@@ -126,23 +126,14 @@ h1 {
 }
 
 .button-love {
- 
     margin-top: 30px;
- 
     padding: 10px 20px;
- 
     font-size: 18px;
- 
     color: white;
- 
     background-color: #ff66b2;
- 
     border: none;
- 
     border-radius: 5px;
- 
     cursor: pointer;
- 
 }
 
 @keyframes twinkle {
